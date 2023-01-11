@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("What database would you like to use? :");
+
+            var db = DataAccessFactory.GetDataAccessType(Console.ReadLine());
+
+            db.SaveData();
+            db.LoadData();
         }
     }
 }
